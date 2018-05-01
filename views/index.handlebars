@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="jumbotron">
+    <div class="container row">
+      <div class="col-3">
+        <img alt="Hamburger" class="rounded w-100 d-inline" src="/assets/images/burger.png">
+        <h1 class="display-4">Burger Time!</h1>
+      </div>
+      <div class="offset-2 col-7">
+        
+        <h2>Add a Burger</h2>
+          <form class="create-form">
+            <div class="form-group">
+              <label for="burg">Burger Name:</label>
+              <input type="text" id="burg" name="name">
+            </div>
+            <div class="form-group">
+              <input type="radio" name="order" value="1" checked> Order Up!<br>
+            </div>
+            <button type="submit">Add Burger</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="jumbotron">
+    <div class="container row">
+      <div class="col-6">
+
+        <h2>Burger Orders: </h2>
+        <ul>
+          {{#each burgers}}
+            {{#if order}}
+              {{> burgers/burger-block order=false}}
+            {{/if}}
+          {{/each}}
+        </ul>
+        
+      </div>
+      <div class="col-6">
+
+        <h2>Burgers Delivered: </h2>
+        <ul>
+          {{#each burgers}}
+            {{#unless order}}
+              {{> burgers/burger-block order=true}}
+            {{/unless}}   
+          {{/each}}
+        </ul>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+

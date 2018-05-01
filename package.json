@@ -1,0 +1,29 @@
+{
+  "name": "mvc_design",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "express-handlebars": "^2.0.1",
+    "mysql": "^2.15.0"
+  },
+  "devDependencies": {
+    "handlebars-helper-css": "^0.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justbbarnett/burger.git"
+  },
+  "bugs": {
+    "url": "https://github.com/justbbarnett/burger/issues"
+  },
+  "homepage": "https://github.com/justbbarnett/burger#readme"
+}
