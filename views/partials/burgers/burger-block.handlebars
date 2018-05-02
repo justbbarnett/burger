@@ -1,9 +1,16 @@
 <li>
 	{{name}}
 	<br>
-	<button class="change-order" data-id="{{id}}" data-neworder="{{order}}">
-		{{#if order}}Send it back!!{{else}}Burger Delivered!{{/if}}
-	</button>
+	{{!-- <button class="change-order btn btn-danger" data-id="{{id}}" data-neworder="{{order}}">
+		{{#if order}}Send it back!!{{else}}Deliver{{/if}}
+	</button> --}}
 
-	<button class="delete-burger" data-id="{{this.id}}">Devour!</button>
+	{{#unless order}}
+		<button class="change-order btn btn-primary" data-id="{{id}}" data-neworder="{{order}}">Deliver</button>
+	{{/unless}}
+
+	{{#if order}}
+		<button class="change-order btn btn-danger" data-id="{{id}}" data-neworder="{{order}}">Send it back!</button>
+		<button class="delete-burger btn btn-warning" data-id="{{this.id}}">Devour!</button>
+	{{/if}}
 </li>
