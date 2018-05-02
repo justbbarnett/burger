@@ -31,7 +31,7 @@ function objToSql(ob) {
       }
       // e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
       // e.g. {sleepy: true} => ["sleepy=true"]
-      arr.push(key + "=" + value);
+      arr.push(key + " = " + value);
     }
   }
 
@@ -60,7 +60,7 @@ var orm = {
     queryString += printQuestionMarks(vals.length);
     queryString += ") ";
 
-    console.log(queryString);
+    console.log(queryString, vals);
 
     connection.query(queryString, vals, function(err, result) {
       if (err) {
@@ -73,13 +73,12 @@ var orm = {
   // An example of objColVals would be {name: panther, sleepy: true}
   update: function(table, objColVals, condition, cb) {
     var queryString = "UPDATE " + table;
-
     queryString += " SET ";
     queryString += objToSql(objColVals);
     queryString += " WHERE ";
     queryString += condition;
 
-    console.log(queryString);
+    console.log('string', queryString);
     connection.query(queryString, function(err, result) {
       if (err) {
         throw err;

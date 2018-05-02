@@ -1,8 +1,10 @@
 // Make sure we wait to attach our handlers until the DOM is fully loaded.
 $(function() {
+  console.log("RUNNING THE BURGERS.JS FUNCTION!!!")
   $(".change-order").on("click", function(event) {
     var id = $(this).data("id");
-    var newOrder = $(this).data("newOrder");
+    var newOrder = $(this).data("neworder");
+    // newOrder == true ? newOrder = 1 : newOrder = 0
 
     var newOrderStatus = {
       order: newOrder
