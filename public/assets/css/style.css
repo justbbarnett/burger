@@ -4,6 +4,7 @@ li {
   font: bold;
   font-family: "comic sans ms";
   font-size: 25px;
+  font-size: 3vw;
 }
 
 h1 {
@@ -17,7 +18,7 @@ h1 {
 h2, h3 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   display: inline;
-  
+  font-size: 4vw;
 }
 
 

@@ -1,9 +1,6 @@
 <li>
 	{{name}}
 	<br>
-	{{!-- <button class="change-order btn btn-danger" data-id="{{id}}" data-neworder="{{order}}">
-		{{#if order}}Send it back!!{{else}}Deliver{{/if}}
-	</button> --}}
 
 	{{#unless order}}
 		<button class="change-order btn btn-primary" data-id="{{id}}" data-neworder="{{order}}">Deliver</button>
