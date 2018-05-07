@@ -1,4 +1,79 @@
-<div class="container">
+<div class="container row">
+  <div class="jumbotron col-lg-4 col-md-12 col-sm-12 col-xs-12">
+    <div class="container row">
+      <div class="container blogo col-lg-12 col-md-4">
+        <img alt="B logo" class="responsive img-fluid w-80"  src="/assets/images/burger.png">
+        <br>
+      </div>
+      
+      <div class="container col-lg-12 col-md-8">
+        <h1>BURGATORY</h1> 
+
+        <form class="create-form">
+          <div class="form-group">
+            <small class="form-text text-muted">Order Here!</small>
+            <label for="burg">Burger Name:</label>
+            <input type="text" id="burg" name="name">
+            
+          </div>
+
+          <div class="form-inline">
+            <div class="form-group">
+              <input type="radio" name="order" value="1" checked> Order Up!<br>
+              <button class="btn btn-warning btn-form" type="submit">Add Burger</button>
+            </div>
+          </div>
+        </form>
+      </div>
+        
+    </div>
+  </div>
+
+
+  <div class="container col-lg-8 col-md-12 col-sm-12 col-xs-12">
+    <div class="container">
+
+
+      <div class="card order-cards mw-100">
+        <div class="card-header text-center">
+          <h2>Burger Orders: </h2>
+        </div>
+        <div class="card-body">
+          
+          <ul class="list-unstyled">
+            {{#each burgers}}
+              {{#if order}}
+                {{> burgers/burger-block order=false}}
+              {{/if}}
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+
+
+      <div class="card order-cards" >
+        <div class="card-header text-center">
+          <h2>Burgers Delivered: </h2>
+        </div>
+        <div class="card-body">
+          
+          <ul class="list-unstyled">
+            {{#each burgers}}
+              {{#unless order}}
+                {{> burgers/burger-block order=true}}
+              {{/unless}}   
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+</div>
+
+{{!-- original working html... before I go and mess it all up above :) --}}
+{{!-- <div class="container">
   <div class="jumbotron">
     <div class="container row">
       <div class="col-3">
@@ -62,6 +137,6 @@
       </div>
     </div>
   </div>
-</div>
+</div> --}}
 
 

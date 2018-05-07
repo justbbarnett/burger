@@ -1,10 +1,20 @@
-li {
+ul {
   padding: 5px;
   margin: 5px;
   font: bold;
   font-family: "comic sans ms";
   font-size: 25px;
-  font-size: 3vw;
+  font-size: 2vw;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list-unstyled > li {
+  flex-wrap: wrap;
+  width: 50%;
+  float: left;
+  position: relative;
+  padding-bottom: 35px;
 }
 
 h1 {
@@ -12,32 +22,58 @@ h1 {
   font: bold;
   display: inline;
   color: rgb(189, 26, 26);
-  font-size: 8vw;
+  font-size: 4vw;
+  text-align: center;
 }
 
 h2, h3 {
   font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   display: inline;
-  font-size: 4vw;
+  font-size: 2vw;
 }
 
 
+.order-cards {
+  width: 100%;
+  margin-top: 10px;
+  margin-bottom: 5px;
+}
 
 .btn {
   font-family: Arial, Helvetica, sans-serif;
   font-size: 10px;
+  margin-bottom: 5px;
+  position: absolute;
+  bottom: 0;
 }
 
 .label {
   font-weight: bold;
-}
+};
 
 .create-update-form {
   padding: 5px;
   margin: 5px;
   background: aqua;
-}
+};
 
 .form-group {
   margin-bottom: 5px;
+};
+
+#blogo {
+  margin-left: auto;
+  margin-right: auto;
+  display: inline;
+  max-height: 10px;
+}
+
+.devour {
+  margin-left: 100px;
+}
+
+.btn-form {
+  display: inline;
+  position: relative;
+  margin-left: 18px;
 }
